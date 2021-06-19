@@ -18,9 +18,24 @@ module.exports = {
 
     //入口
     entry: {
+        //公共css
+        commonCSS: './src/js/commonCSS.js',
+        dom: './src/js/common/dom.js',
+        http: './src/js/common/http.js',
+        utils: './src/js/common/utils.js',
+        //三方插件
+        captcha: './src/lib/captcha/captcha-mini.js',
+        swiper: './src/lib/swiper/swiper-bundle.js',
+        weui: './src/lib/weui/weui.js',
+
         //多页面应用 home模块
         home: './src/js/home.js',
-        login: './src/js/login.js'
+        login: './src/js/login.js',
+        advertisement: './src/js/advertisement.js',
+        register: './src/js/register.js',
+        sports: './src/js/sports.js',
+        about: './src/js/about.js',
+        userInfo: './src/js/userInfo.js'
     },
 
     //出口
@@ -91,14 +106,46 @@ module.exports = {
             //以哪个页面作为打包的页面模板--打包哪个页面
             template: './src/page/home.html',
             filename: 'home.html',
-            chunks: ['home']
+            chunks: ['home', 'commonCSS', 'dom', 'http', 'utils', 'swiper']
         }),
         //login.html
         new HtmlWebpackPlugin({
             //以哪个页面作为打包的页面模板--打包哪个页面
             template: './src/page/login.html',
             filename: 'login.html',
-            chunks: ['login']
+            chunks: ['login', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        // advertisement.html
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/advertisement.html',
+            filename: 'advertisement.html',
+            chunks: ['advertisement', 'commonCSS', 'dom']
+        }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/register.html',
+            filename: 'register.html',
+            chunks: ['register', 'commonCSS', 'dom', 'http', 'captcha', 'utils']
+        }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/sports.html',
+            filename: 'sports.html',
+            chunks: ['sports', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/about.html',
+            filename: 'about.html',
+            chunks: ['about', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: './src/page/userInfo.html',
+            filename: 'userInfo.html',
+            chunks: ['userInfo', 'commonCSS', 'dom', 'http', 'utils', 'weui']
         }),
 
 
@@ -126,7 +173,7 @@ module.exports = {
         port: 8081,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'index.html', // 打开的页面
+        openPage: 'advertisement.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 

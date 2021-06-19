@@ -1,0 +1,45 @@
+/*
+ * 在 normalize.css 基础上进行的其他重置
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  /* AntD 字体家族：https://ant.design/docs/spec/font-cn#%E5%AD%97%E4%BD%93%E5%AE%B6%E6%97%8F */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  border: none;
+  /* 去掉浏览器默认的 input 边框样式 */
+  outline: none;
+  /* 去掉浏览器默认的聚焦时候的蓝色边框 */
+}
+
+a {
+  text-decoration: none;
+  color: #8a8a8a;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0
+}

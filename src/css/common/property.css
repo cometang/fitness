@@ -1,0 +1,105 @@
+/*
+ * 面向属性的 CSS
+ */
+
+/* 布局方式 */
+
+.dpflex {
+    display: flex;
+}
+
+.flexcol {
+    flex-direction: column;
+}
+
+.flexaround {
+    justify-content: space-around;
+}
+
+.alcenter {
+    align-items: center;
+}
+
+.dpnone {
+    display: none;
+}
+
+.flex1 {
+    flex: 1
+}
+
+/* 盒模型 */
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.mt16 {
+    margin-top: 16px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mr16 {
+    margin-right: 16px;
+}
+
+.mb16 {
+    margin-bottom: 16px;
+}
+
+.ml12 {
+    margin-left: 12px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.pd16 {
+    padding: 16px;
+}
+
+.pl8 {
+    padding-left: 8px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+/* 字号 */
+
+.fs12 {
+    font-size: 12px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.fs20 {
+    font-size: 20px;
+}
+
+.borderRd15 {
+    border-radius: 15px;
+}
+
+.backgColor {
+    background-color: #e8e8e8;
+}

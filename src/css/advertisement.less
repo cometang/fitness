@@ -1,0 +1,62 @@
+header{
+    height: 44px;
+    width: 100%;
+    text-align: center;
+    line-height: 44px;
+}
+main{
+    position: relative;
+    background-image: url('../img/advertisement-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.time-btn{
+    position: absolute;
+    top: 28px;
+    right: 14px;
+    padding: 8px;
+    width: 105px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+
+}
+.time-text{
+    flex: 2;
+    text-align: center;
+    line-height: 24px;
+    border-right: 1px solid #bbb;
+}
+.text{
+    flex: 3;
+    text-align: center;
+    line-height: 24px;
+}
+.text-animation{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    /*最开始的文本大小*/
+    font-size: 0;
+    opacity: 0;
+    bottom:324px;
+   /*使用动画*/
+   animation: textAnimation 1s forwards; 
+}
+
+/*定义动画*/
+@keyframes textAnimation {
+    
+    from{
+        font-size: 0;
+        opacity: 0;
+        bottom:324px;
+    }
+    to{
+        font-size: 48px;
+        opacity: 1;
+        bottom:124px;
+    }
+}
